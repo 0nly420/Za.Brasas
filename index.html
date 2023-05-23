@@ -1,46 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Za-Brasas</title>
-</head>
-<body>
-    <header>
-        <a href="#" class="logo">Za-Brasas</a>
-        <ul class="navlist">
-            <li><a href="home.html">Inicio</a></li>
-            <li><a href="#">Carta</a></li>
-            <li><a href="/maps/maps.html">Ubicacion</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <li><a href="/game1/src/index.html">Juegos</a></li>
-        </ul>
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </header>
-    <section class="hero">
-        <div class="hero-text">
-            <h5>#1 Calidad</h5>
-            <h4>Polleria</h4>
-            <h1>Za-Brasas</h1>
-            <p>La prioridad del local es la calidad del producto que se ofrece al cliente, <br> Avanzamos porque
-            ustedes confian en nosotros</p>
-        </div>
-        <div class="hero-img">
-            <img src="logo.png" alt="">
-        </div>
-    </section>
-    <div class="icons">
-        <a href="https://www.instagram.com/za.brasas/"><i class="ri-instagram-line"></i></a>
-        <a href="https://www.facebook.com/ZABRASAS.VALLE.BLANCO"> <i class="ri-facebook-line"></i></a>
-        <a href="https://twitter.com/Za_Brasas"><i class="ri-twitter-line"></i></a>
-        <a href="https://www.tiktok.com/@za.brasas?is_from_webapp=1&sender_device=pc"><i class="ri-tiktok-line"></i></a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juegos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Game canvas -->
+    <canvas id="c"></canvas>
+
+    <!-- Gameplay HUD -->
+    <div class="hud">
+      <div class="hud__score">
+        <div class="score-lbl"></div>
+        <div class="cube-count-lbl"></div>
+      </div>
+      <div class="pause-btn"><div></div></div>
+      <div class="slowmo">
+        <div class="slowmo__bar"></div>
+      </div>
     </div>
-    <script src="https://unpkg.com/scrollreveal"></script>  
-    <script src="js.js"></script>
-</body>
+
+    <!-- Menu System -->
+    <div class="menus">
+      <div class="menu menu--main">
+        <h1>CUBITOS</h1>
+        <button type="button" class="play-normal-btn">INICAR</button>
+        <button type="button" class="play-casual-btn">JUEGO CASUAL</button>
+        <div class="credits">Copyright de parte de: <a href="/home/home.html">Za Brasas</a></div>
+      </div>
+      <div class="menu menu--pause">
+        <h1>Pausa</h1>
+        <button type="button" class="resume-btn">REANUDAR</button>
+        <button type="button" class="menu-btn--pause">MENU</button>
+      </div>
+      <div class="menu menu--score">
+        <h1>FIN DEL JUEGO</h1>
+        <h2>TU RECORD:</h2>
+        <div class="final-score-lbl"></div>
+        <div class="high-score-lbl"></div>
+        <button type="button" class="play-again-btn">JUGAR DE NUEVO</button>
+        <button type="button" class="menu-btn--score">MENU</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
